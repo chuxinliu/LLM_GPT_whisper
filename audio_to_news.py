@@ -6,7 +6,7 @@ Created: 2024-03-10 by Chuxin Liu
 import openai
 import os
 
-OPENAI_API_KEY = "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"
+OPENAI_API_KEY = ""
 client = openai.OpenAI(api_key=OPENAI_API_KEY)
 
 # read txt file
