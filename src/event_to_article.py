@@ -1,5 +1,5 @@
-from file_manager import FileManager
-from openai_manager import OpenAIManager
+from src.file_manager import FileManager
+from src.openai_manager import OpenAIManager
 
 class EventToArticle:
     """Converts event audio to a structured news article."""
@@ -27,8 +27,8 @@ class EventToArticle:
     def combine_transcripts(self, audio_files):
         entire_transcript = ""
         for audio in audio_files:
-            audio_file = self.file_manager.read_file(audio, 'rb')
-            entire_transcript += self.openai_manager.transcribe_audio(audio_file)
+            # audio_file = self.file_manager.read_file(audio, 'rb')
+            entire_transcript += self.openai_manager.transcribe_audio(audio)
         return entire_transcript
     
     def modify_transcript(self, transcript):
